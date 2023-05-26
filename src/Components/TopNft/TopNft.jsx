@@ -5,7 +5,7 @@ import { Button } from '../Buttons/Button';
 
 export function TopNft() {
 	return (
-		<div className='bg-elements-bg mt-5 p-5 pb-70'>
+		<div className='bg-elements-bg rounded-2xl mt-5 p-5 pb-70'>
 			<div>
 				<img src={topNftImage} alt='topNftImage' />
 			</div>

@@ -2,7 +2,7 @@ import { Button } from '../Buttons/Button';
 
 export function MainCard() {
 	return (
-		<div className='drop-shadow-lg'>
+		<div className='drop-shadow-lg '>
 			<div className='bg-card-background bg-no-repeat rounded-xl bg-cover '>
 				<div className='rounded-xl bg-center bg-cover-card-background bg-no-repeat'>
 					<div className='p-4'>
