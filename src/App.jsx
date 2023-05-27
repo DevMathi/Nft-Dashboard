@@ -1,14 +1,12 @@
 import './index.css';
-import { Header } from './Components/Header/Header';
-import { Main } from './Components/Main/Main';
-import { NavMenu } from './Components/NavMenu/NavMenu';
+import { createContext } from 'react';
+import { Home } from './routes/Home';
 
 export function App() {
+	const states = createContext();
 	return (
-		<>
-			<Header />
-			<Main />
-			<NavMenu />
-		</>
+		<states.Provider value={states}>
+			<Home />
+		</states.Provider>
 	);
 }

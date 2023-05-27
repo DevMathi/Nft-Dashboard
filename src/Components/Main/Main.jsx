@@ -1,6 +1,6 @@
-import { MainCard } from '../MainCard/MainCard';
-import { TopNft } from '../TopNft/TopNft';
-import { TrendingBids } from '../TrendingBids/TrendingBids';
+import { MainCard } from './MainCard';
+import { TopNft } from './TopNft';
+import { TrendingBids } from './TrendingBids';
 
 export function Main() {
 	return (
