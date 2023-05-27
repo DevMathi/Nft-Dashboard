@@ -4,14 +4,14 @@ import { Card } from '../Card/Card';
 export function TrendingBids() {
 	const [buttonSelected, setButtonSelected] = useState('');
 	const cardsRender = [1, 2, 3, 4, 5];
-	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-all ease-linear	 duration-700	px-2`;
+	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-all ease-linear	 duration-300	px-2`;
 	function selectButton(text) {
 		setButtonSelected(text);
 	}
 
 	return (
 		<div>
-			<nav className='flex text-sm gap-20 my-12 text-white'>
+			<nav className='flex text-sm gap-20 my-12 text-white justify-center'>
 				<div>
 					<h2 className='font-semibold'>Trending Bids</h2>
 				</div>
@@ -26,7 +26,7 @@ export function TrendingBids() {
 							className='rounded-2xl'
 							onClick={() => selectButton('All')}
 						>
-							All
+							All{' '}
 						</button>
 					</li>
 					<li

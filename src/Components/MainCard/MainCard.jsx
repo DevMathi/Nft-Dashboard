@@ -17,7 +17,7 @@ export function MainCard() {
 						</h2>
 						<div className='mt-10 '>
 							<Button text='Explore' px='5' py='2' color='bg-purple-button' />
-							<Button text='Explore' px='5' py='2' color='bg-red-button' />
+							<Button text='Create' px='5' py='2' color='bg-red-button' />
 						</div>
 					</div>
 				</div>

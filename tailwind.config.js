@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		backgroundImage: {
-			'card-background': "url('./src/assets/card-imgs/discover.svg')",
-			'cover-card-background': "url('./src/assets/card-imgs/cover.svg')",
+			'card-background': '../src/assets/card-imgs/discover.svg',
+			'cover-card-background': "url('../src/assets/card-imgs/cover.svg')",
 		},
 		fontFamily: {
 			poppins: ['Poppins'],
