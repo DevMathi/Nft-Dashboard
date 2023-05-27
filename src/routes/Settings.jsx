@@ -1,10 +1,10 @@
 import { Header } from '../Components/Header/Header';
 
-export function SavedItems() {
+export function Settings() {
 	return (
 		<>
 			<Header />
-			<h1>SavedItems</h1>
+			<h1>Settings</h1>
 		</>
 	);
 }

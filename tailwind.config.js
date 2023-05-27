@@ -25,6 +25,9 @@ export default {
 				'red-button': '#DC3546',
 				'blue-light': '#6C7AA0',
 			},
+			screens: {
+				SmartphonesG: '369px',
+			},
 		},
 	},
 	plugins: [],

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import LogoImg from '../../assets/header-imgs/logo.svg';
 import modeIcon from '../../assets/header-imgs/mode.svg';
 import bellIcon from '../../assets/header-imgs/bell.svg';
@@ -5,9 +7,17 @@ import avatar from '../../assets/header-imgs/avatar.svg';
 import searchIcon from '../../assets/header-imgs/search.svg';
 
 export function Header() {
+	const [whiteMode, setWhiteMode] = useState(false);
+	const changeMode = () => {
+		setWhiteMode(!whiteMode);
+	};
 	return (
 		<header className='flex mt-8 justify-center items-center '>
-			<img src={LogoImg} alt='logo' className='w-10.75 h-10.75' />
+			<div className='text-center'>
+				<Link to='/'>
+					<img src={LogoImg} alt='logo' className='w-10.75 h-10.75' />
+				</Link>
+			</div>
 			<div className='relative'>
 				<input
 					type='text'
@@ -25,7 +35,11 @@ export function Header() {
 					<img src={searchIcon} alt='search-icon' />
 				</div>
 			</div>
-			<button type='button' className='mx-2.5 h-4.75 w-4.75'>
+			<button
+				type='button'
+				onClick={changeMode}
+				className='mx-2.5 h-4.75 w-4.75'
+			>
 				<img src={modeIcon} alt='icon-mode' />
 			</button>
 			<button type='button' className='mr-3.5 w-4 h-4.5'>

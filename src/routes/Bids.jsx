@@ -1,3 +1,10 @@
+import { Header } from '../Components/Header/Header';
+
 export function Bids() {
-	return <h1>Bids</h1>;
+	return (
+		<>
+			<Header />
+			<h1>Bids</h1>
+		</>
+	);
 }

@@ -15,14 +15,14 @@ export function TopNft() {
 				<img src={onlineImg} alt='avatarOnlineIcon' />
 			</div>
 			<h2 className='text-lg font-semibold text-white mb-5'>Birghten Lq</h2>
-			<div className='flex flex-col gap-4'>
-				<div className='flex text-sm gap-10'>
+			<div className='flex flex-col gap-4 '>
+				<div className='flex text-sm justify-between'>
 					<p className='text-white'>Auction time</p>
 					<p className='text-white'>
 						Current Bid: <span className='text-purple-button'>0.05 ETH</span>
 					</p>
 				</div>
-				<div className='flex gap-20'>
+				<div className='flex justify-between'>
 					<span className='text-blue-light'>3h 1m 50s</span>
 					<span className='text-blue-light'>0.15 ETH</span>
 				</div>

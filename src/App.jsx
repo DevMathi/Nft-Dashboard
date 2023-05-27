@@ -1,12 +1,10 @@
 import './index.css';
-import { createContext } from 'react';
-import { Home } from './routes/Home';
+import { Outlet } from 'react-router-dom';
 
 export function App() {
-	const states = createContext();
 	return (
-		<states.Provider value={states}>
-			<Home />
-		</states.Provider>
+		<div>
+			<Outlet />
+		</div>
 	);
 }
