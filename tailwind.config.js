@@ -3,7 +3,7 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		backgroundImage: {
-			'card-background': '../src/assets/card-imgs/discover.svg',
+			'card-background': 'url("../src/assets/card-imgs/discover.svg")',
 			'cover-card-background': "url('../src/assets/card-imgs/cover.svg')",
 		},
 		fontFamily: {
