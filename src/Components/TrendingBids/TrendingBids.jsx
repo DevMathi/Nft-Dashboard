@@ -4,24 +4,26 @@ import { Card } from '../Card/Card';
 export function TrendingBids() {
 	const [buttonSelected, setButtonSelected] = useState('');
 	const cardsRender = [1, 2, 3, 4, 5];
-	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-[padding]	 duration-300	px-1`;
+	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-all ease-linear	 duration-700	px-2`;
 	function selectButton(text) {
 		setButtonSelected(text);
 	}
 
 	return (
 		<div>
-			<nav className='flex gap-20 my-12 text-white justify-between'>
-				<h2 className='font-semibold'>Trending Bids</h2>
-				<ul className='flex gap-2.5'>
+			<nav className='flex text-sm gap-20 my-12 text-white'>
+				<div>
+					<h2 className='font-semibold'>Trending Bids</h2>
+				</div>
+				<ul className='flex gap-1'>
 					<li
 						className={
-							buttonSelected === 'All' ? backgroundWhenButtonIsSelected : ''
+							buttonSelected === 'All' ? backgroundWhenButtonIsSelected : 'px-1'
 						}
 					>
 						<button
 							type='button'
-							className='rounded-2xl  click: bg-none'
+							className='rounded-2xl'
 							onClick={() => selectButton('All')}
 						>
 							All
@@ -29,12 +31,15 @@ export function TrendingBids() {
 					</li>
 					<li
 						className={
-							buttonSelected === 'Artwork' ? backgroundWhenButtonIsSelected : ''
+							buttonSelected === 'Artwork'
+								? backgroundWhenButtonIsSelected
+								: 'px-1'
 						}
 					>
 						<button
 							type='button'
 							href='.'
+							className='rounded-2xl'
 							onClick={() => selectButton('Artwork')}
 						>
 							Artwork
@@ -42,10 +47,17 @@ export function TrendingBids() {
 					</li>
 					<li
 						className={
-							buttonSelected === 'Book' ? backgroundWhenButtonIsSelected : ''
+							buttonSelected === 'Book'
+								? backgroundWhenButtonIsSelected
+								: 'px-1'
 						}
 					>
-						<button type='button' href='.' onClick={() => selectButton('Book')}>
+						<button
+							type='button'
+							href='.'
+							className='rounded-2xl'
+							onClick={() => selectButton('Book')}
+						>
 							Book
 						</button>
 					</li>
