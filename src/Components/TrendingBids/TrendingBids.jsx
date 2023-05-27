@@ -1,37 +1,60 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Card } from '../Card/Card';
 
 export function TrendingBids() {
-	const [isSelected, setIsSelected] = useState('');
-	const optionSelected = useRef();
-	useEffect(() => {
-		console.log(optionSelected.HTML);
-	}, [optionSelected]);
+	const [buttonSelected, setButtonSelected] = useState('');
+	const cardsRender = [1, 2, 3, 4, 5];
+	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-[padding]	 duration-300	px-3`;
+	function selectButton(text) {
+		setButtonSelected(text);
+	}
 
 	return (
 		<div>
-			<nav className='flex gap-20 my-12 text-white'>
+			<nav className='flex gap-20 my-12 text-white justify-between'>
 				<h2 className='font-semibold'>Trending Bids</h2>
 				<ul className='flex gap-2.5'>
-					<li className={isSelected ? 'bg-purple-button' : ''}>
-						<a href='.' ref={optionSelected} className='rounded-2xl'>
+					<li
+						className={
+							buttonSelected === 'All' ? backgroundWhenButtonIsSelected : ''
+						}
+					>
+						<button
+							type='button'
+							className='rounded-2xl  click: bg-none'
+							onClick={() => selectButton('All')}
+						>
 							All
-						</a>
+						</button>
 					</li>
-					<li className={isSelected ? 'bg-purple-button' : ''}>
-						<a href='.' ref={optionSelected}>
-							Artwtok
-						</a>
+					<li
+						className={
+							buttonSelected === 'Artwork' ? backgroundWhenButtonIsSelected : ''
+						}
+					>
+						<button
+							type='button'
+							href='.'
+							onClick={() => selectButton('Artwork')}
+						>
+							Artwork
+						</button>
 					</li>
-					<li className={isSelected ? 'bg-purple-button' : ''}>
-						<a href='.' ref={optionSelected}>
+					<li
+						className={
+							buttonSelected === 'Book' ? backgroundWhenButtonIsSelected : ''
+						}
+					>
+						<button type='button' href='.' onClick={() => selectButton('Book')}>
 							Book
-						</a>
+						</button>
 					</li>
 				</ul>
 			</nav>
 			<div>
-				<Card />
+				{cardsRender.map((value) => (
+					<Card key={value} />
+				))}
 			</div>
 		</div>
 	);

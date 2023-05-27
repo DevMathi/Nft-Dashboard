@@ -10,6 +10,9 @@ export default {
 		fontFamily: {
 			poppins: ['Poppins'],
 		},
+		transitionProperty: {
+			spacing: 'padding',
+		},
 		extend: {
 			dropShadow: {
 				input: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',

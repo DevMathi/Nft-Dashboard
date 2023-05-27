@@ -27,7 +27,7 @@ export function TopNft() {
 					<span className='text-blue-light'>0.15 ETH</span>
 				</div>
 			</div>
-			<div className='mt-10'>
+			<div className='mt-10 flex justify-center'>
 				<Button text='Place a Bid' px='5' py='2' color='bg-purple-button' />
 				<Button text='Details' px='7' py='2' color='bg-red-button' />
 			</div>

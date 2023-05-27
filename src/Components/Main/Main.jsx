@@ -4,7 +4,7 @@ import { TrendingBids } from '../TrendingBids/TrendingBids';
 
 export function Main() {
 	return (
-		<main className='px-5 mt-12'>
+		<main className='px-5 mt-12 pb-14'>
 			<MainCard />
 			<TopNft />
 			<TrendingBids />
