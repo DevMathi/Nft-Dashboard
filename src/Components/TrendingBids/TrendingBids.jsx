@@ -4,7 +4,7 @@ import { Card } from '../Card/Card';
 export function TrendingBids() {
 	const [buttonSelected, setButtonSelected] = useState('');
 	const cardsRender = [1, 2, 3, 4, 5];
-	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-[padding]	 duration-300	px-3`;
+	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-[padding]	 duration-300	px-1`;
 	function selectButton(text) {
 		setButtonSelected(text);
 	}
