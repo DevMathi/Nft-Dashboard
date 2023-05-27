@@ -6,7 +6,7 @@ import searchIcon from '../../assets/header-imgs/search.svg';
 
 export function Header() {
 	return (
-		<header className='flex mt-8 justify-center items-center p-2 '>
+		<header className='flex mt-8 justify-center items-center '>
 			<img src={LogoImg} alt='logo' className='w-10.75 h-10.75' />
 			<div className='relative'>
 				<input
