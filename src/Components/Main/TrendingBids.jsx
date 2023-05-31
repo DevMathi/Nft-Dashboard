@@ -1,13 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from '../Card/Card';
 
 export function TrendingBids() {
-	const [buttonSelected, setButtonSelected] = useState('');
+	const backgroundWhenButtonIsSelected = {
+		all: `left-[-11px] px-5 py-2.5`,
+		eth: 'left-[24px] px-6 py-2.5',
+		book: 'left-[67px] pl-3 pr-12 py-2.5',
+	};
+	const [buttonSelected, setButtonSelected] = useState(
+		backgroundWhenButtonIsSelected.all
+	);
 	const cardsRender = [1, 2, 3, 4, 5];
-	const backgroundWhenButtonIsSelected = `bg-purple-button rounded-full  transition-all ease-linear	 duration-300	px-2`;
-	function selectButton(text) {
-		setButtonSelected(text);
+
+	function selectButtonAll() {
+		setButtonSelected(backgroundWhenButtonIsSelected.all);
 	}
+	function selectButtonEth() {
+		setButtonSelected(backgroundWhenButtonIsSelected.eth);
+	}
+	function selectButtonBook() {
+		setButtonSelected(backgroundWhenButtonIsSelected.book);
+	}
+	useEffect(() => {
+		console.log(buttonSelected);
+	}, [buttonSelected]);
 
 	return (
 		<div>
@@ -15,48 +31,35 @@ export function TrendingBids() {
 				<div>
 					<h2 className='font-semibold'>Trending Bids</h2>
 				</div>
-				<ul className='flex gap-1'>
-					<li
-						className={
-							buttonSelected === 'All' ? backgroundWhenButtonIsSelected : 'px-1'
-						}
-					>
+				<ul className='flex gap-5 relative z-1'>
+					<div
+						className={`absolute w-2 h-2 bg-purple-button rounded-full transition-left ease-in-out delay-50 ${buttonSelected}`}
+					/>
+					<li className='z-1'>
 						<button
 							type='button'
 							className='rounded-2xl'
-							onClick={() => selectButton('All')}
+							onClick={() => selectButtonAll()}
 						>
-							All{' '}
+							All
 						</button>
 					</li>
-					<li
-						className={
-							buttonSelected === 'Artwork'
-								? backgroundWhenButtonIsSelected
-								: 'px-1'
-						}
-					>
+					<li className='z-1'>
 						<button
 							type='button'
 							href='.'
-							className='rounded-2xl'
-							onClick={() => selectButton('Artwork')}
+							className='rounded-2xl z-1'
+							onClick={() => selectButtonEth()}
 						>
-							Artwork
+							ETH
 						</button>
 					</li>
-					<li
-						className={
-							buttonSelected === 'Book'
-								? backgroundWhenButtonIsSelected
-								: 'px-1'
-						}
-					>
+					<li className='z-1'>
 						<button
 							type='button'
 							href='.'
-							className='rounded-2xl'
-							onClick={() => selectButton('Book')}
+							className='rounded-2xl z-1'
+							onClick={() => selectButtonBook()}
 						>
 							Book
 						</button>

@@ -12,7 +12,7 @@ export function Header() {
 		setWhiteMode(!whiteMode);
 	};
 	return (
-		<header className='flex mt-8 justify-center items-center '>
+		<header className='flex mt-8 justify-center items-center min-[400]:p-1 '>
 			<div className='text-center'>
 				<Link to='/'>
 					<img src={LogoImg} alt='logo' className='w-10.75 h-10.75' />

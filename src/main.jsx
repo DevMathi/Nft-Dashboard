@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { App } from './App';
 import './index.css';
-import { Bids } from './routes/Bids';
-import { Collections } from './routes/Collections';
+import { Bids } from './routes/Bids/Bids';
+import { Collections } from './routes/Collections/Collections';
 import { Home } from './routes/Home';
-import { Profile } from './routes/Profile';
-import { SavedItems } from './routes/SavedItems';
-import { Settings } from './routes/Settings';
+import { Profile } from './routes/Profile/Profile';
+import { SavedItems } from './routes/SavedItems/SavedItems';
+import { Settings } from './routes/Settings/Settings';
 
 const router = createBrowserRouter([
 	{

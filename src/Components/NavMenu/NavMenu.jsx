@@ -8,7 +8,7 @@ import signOutIcon from '../../assets/nav-imgs/signout.svg';
 
 export function NavMenu() {
 	return (
-		<nav className='fixed bottom-0 w-full'>
+		<nav className='fixed bottom-0 w-full z-10'>
 			<div className='bg-elements-bg flex items-center gap-9 py-5 w-full'>
 				<button type='button' className='ml-7'>
 					<Link to='/Bids'>

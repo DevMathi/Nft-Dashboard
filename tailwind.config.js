@@ -24,9 +24,20 @@ export default {
 				'purple-button': '#6F4FF2',
 				'red-button': '#DC3546',
 				'blue-light': '#6C7AA0',
+				'bids-green': '#50BB25',
+				'bids-yellow': '#F9D62C',
+				'border-color': '#D6DBDE',
+				'bids-red': '#DC3546',
+				'bg-avatar': '#302CD7',
 			},
 			screens: {
 				SmartphonesG: '369px',
+			},
+			zIndex: {
+				1: '1',
+			},
+			transitionProperty: {
+				left: 'left',
 			},
 		},
 	},
