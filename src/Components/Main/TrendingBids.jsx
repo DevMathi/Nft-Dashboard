@@ -1,35 +1,43 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Card } from '../Card/Card';
+import { EthGraph } from './Graphics/EthGraph';
+import { CircleGraph } from './Graphics/CircleGraph';
 
 export function TrendingBids() {
 	const backgroundWhenButtonIsSelected = {
 		all: `left-[-11px] px-5 py-2.5`,
 		eth: 'left-[24px] px-6 py-2.5',
-		book: 'left-[67px] pl-3 pr-12 py-2.5',
+		stt: 'left-[72px] pl-3 pr-7 py-2.5',
 	};
 	const [buttonSelected, setButtonSelected] = useState(
 		backgroundWhenButtonIsSelected.all
 	);
 	const cardsRender = [1, 2, 3, 4, 5];
-
 	function selectButtonAll() {
 		setButtonSelected(backgroundWhenButtonIsSelected.all);
 	}
 	function selectButtonEth() {
 		setButtonSelected(backgroundWhenButtonIsSelected.eth);
 	}
-	function selectButtonBook() {
-		setButtonSelected(backgroundWhenButtonIsSelected.book);
+	function selectButtonStt() {
+		setButtonSelected(backgroundWhenButtonIsSelected.stt);
 	}
-	useEffect(() => {
-		console.log(buttonSelected);
-	}, [buttonSelected]);
 
 	return (
 		<div>
 			<nav className='flex text-sm gap-20 my-12 text-white justify-center'>
 				<div>
-					<h2 className='font-semibold'>Trending Bids</h2>
+					<h2 className='font-semibold text-xl'>
+						{buttonSelected === backgroundWhenButtonIsSelected.all
+							? 'Trending Bids'
+							: ''}
+						{buttonSelected === backgroundWhenButtonIsSelected.eth
+							? 'ETH Price'
+							: ''}
+						{buttonSelected === backgroundWhenButtonIsSelected.stt
+							? 'Statistics'
+							: ''}
+					</h2>
 				</div>
 				<ul className='flex gap-5 relative z-1'>
 					<div
@@ -59,17 +67,27 @@ export function TrendingBids() {
 							type='button'
 							href='.'
 							className='rounded-2xl z-1'
-							onClick={() => selectButtonBook()}
+							onClick={() => selectButtonStt()}
 						>
-							Book
+							STT
 						</button>
 					</li>
 				</ul>
 			</nav>
 			<div>
-				{cardsRender.map((value) => (
-					<Card key={value} />
-				))}
+				{buttonSelected === backgroundWhenButtonIsSelected.eth ? (
+					<EthGraph />
+				) : (
+					' '
+				)}
+				{buttonSelected === backgroundWhenButtonIsSelected.all
+					? cardsRender.map((value) => <Card key={value} />)
+					: ' '}
+				{buttonSelected === backgroundWhenButtonIsSelected.stt ? (
+					<CircleGraph />
+				) : (
+					' '
+				)}
 			</div>
 		</div>
 	);

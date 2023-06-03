@@ -45,14 +45,14 @@ export function Profile() {
 				</div>
 				<div>
 					<h1 className='my-8'>Following</h1>
-					{usersFollowing.map(() => (
-						<ProfileFeed />
+					{usersFollowing.map((value) => (
+						<ProfileFeed key={value} />
 					))}
 				</div>
 				<div>
 					<h2 className='my-8 font-semibold text-lg'>My Bought</h2>
-					{usersFollowing.map(() => (
-						<BoughtCard />
+					{usersFollowing.map((value) => (
+						<BoughtCard key={value} />
 					))}
 				</div>
 			</div>
