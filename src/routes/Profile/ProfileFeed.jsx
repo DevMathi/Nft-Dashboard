@@ -23,7 +23,7 @@ export function ProfileFeed() {
 					className={followStatus ? greenButton : redButton}
 					onClick={changeButtonColor}
 				>
-					{followStatus ? 'Unfollow' : 'Follow'}
+					{followStatus ? 'Follow' : 'Unfollow'}
 				</button>
 			</div>
 		</div>
