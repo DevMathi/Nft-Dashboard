@@ -5,7 +5,7 @@ export function MainCard() {
 		<div className='drop-shadow-lg '>
 			<div className='bg-card-background bg-no-repeat rounded-xl bg-cover '>
 				<div className='rounded-xl bg-center bg-cover-card-background bg-no-repeat'>
-					<div className='p-2.5 min-[369px]:p-4'>
+					<div className='p-3'>
 						<h1 className=' font-semibold	font-poppins text-white text-2xl'>
 							Discover, Collect, Sell <br />
 							and Create your NFT

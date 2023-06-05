@@ -45,7 +45,9 @@ export function Header() {
 			<button type='button' className='mr-3.5 w-4 h-4.5'>
 				<img src={bellIcon} alt='notifications' />
 			</button>
-			<img src={avatar} alt='' />
+			<Link to='/Profile'>
+				<img src={avatar} alt='' />
+			</Link>
 		</header>
 	);
 }

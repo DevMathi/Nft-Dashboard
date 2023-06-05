@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import avatar from '../../assets/avatar/avatarTop.svg';
 
 export function ProfileFeed() {
+	const [followStatus, setFollowStatus] = useState(true);
+	const greenButton = `bg-green-500 rounded-full text-black text-sm font-semibold p-1`;
+	const redButton = `bg-bids-red rounded-full text-white-100 text-sm font-semibold p-1`;
+	function changeButtonColor() {
+		setFollowStatus(!followStatus);
+	}
 	return (
 		<div className='bg-elements-bg flex gap-4 py-5 px-5 rounded-xl items-center justify-between drop-shadow-lg my-5'>
 			<div className='flex gap-3'>
@@ -13,9 +20,10 @@ export function ProfileFeed() {
 			<div className='flex items-center'>
 				<button
 					type='button'
-					className=' bg-bids-red rounded-full  text-sm font-semibold p-1'
+					className={followStatus ? greenButton : redButton}
+					onClick={changeButtonColor}
 				>
-					Unfollow
+					{followStatus ? 'Unfollow' : 'Follow'}
 				</button>
 			</div>
 		</div>
