@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import ReactModal from 'react-modal';
 import { Header } from '../../Components/Header/Header';
 import { NavMenu } from '../../Components/NavMenu/NavMenu';
 import { RoutesTitle } from '../RoutesTitle';
@@ -9,10 +8,6 @@ export function Settings() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 
 	const [userName, setUserName] = useState('John Smith');
-
-	const [userEmail, setUserEmail] = useState('johnsmith05389@gmail.com');
-
-	const [userPassword, setUseruserPassword] = useState('12334');
 
 	const inputEmail = useRef();
 
@@ -50,7 +45,8 @@ export function Settings() {
 						<h3 className='font-semilbold'>Full Name</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1'
+							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1 px-2'
+							placeholder='Digite seu nome aqui'
 							ref={nameInput}
 						/>
 						{error ? (
@@ -109,17 +105,6 @@ export function Settings() {
 					>
 						Save
 					</button>
-					<ReactModal
-						overlayClassName='fixed left- bg-transparent p-2 z-50 '
-						className=' bg-elements-bg border-black border-2  z-50'
-						isOpen={modalIsOpen}
-					>
-						<div>
-							<button type='button' onClick={changeModalVisibility}>
-								x
-							</button>
-						</div>
-					</ReactModal>
 				</div>
 				<h3 className='my-7 font-semibold'>Personal Information</h3>
 				<div className='bg-elements-bg rounded-2xl p-5'>

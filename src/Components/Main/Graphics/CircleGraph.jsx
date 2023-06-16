@@ -16,7 +16,7 @@ export const data = {
 };
 export function CircleGraph() {
 	return (
-		<div className='mb-6 p-5 bg-elements-bg rounded-2xl'>
+		<div className='mb-6 p-5  rounded-2xl'>
 			<Doughnut data={data} />
 		</div>
 	);

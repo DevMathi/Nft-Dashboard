@@ -49,7 +49,7 @@ export function EthGraph() {
 	};
 	return (
 		<div>
-			<div className='bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4'>
+			<div className='bg-white dark:bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4'>
 				<div>
 					<Line data={data} options={options} />
 				</div>

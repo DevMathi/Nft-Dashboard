@@ -25,9 +25,9 @@ export function TrendingBids() {
 
 	return (
 		<div>
-			<nav className='flex text-sm gap-20 my-12 text-white justify-center'>
+			<nav className='flex text-sm gap-20 my-12  justify-center'>
 				<div>
-					<h2 className='font-semibold text-xl'>
+					<h2 className='font-semibold text-xl dark:text-white'>
 						{buttonSelected === backgroundWhenButtonIsSelected.all
 							? 'Trending Bids'
 							: ''}
@@ -46,7 +46,11 @@ export function TrendingBids() {
 					<li className='z-1'>
 						<button
 							type='button'
-							className='rounded-2xl'
+							className={
+								buttonSelected === backgroundWhenButtonIsSelected.all
+									? 'rounded-2xl text-white dark:text-black'
+									: 'rounded-2xl dark:text-white'
+							}
 							onClick={() => selectButtonAll()}
 						>
 							All
@@ -56,7 +60,11 @@ export function TrendingBids() {
 						<button
 							type='button'
 							href='.'
-							className='rounded-2xl z-1'
+							className={
+								buttonSelected === backgroundWhenButtonIsSelected.eth
+									? 'rounded-2xl text-white dark:text-black'
+									: 'rounded-2xl dark:text-white'
+							}
 							onClick={() => selectButtonEth()}
 						>
 							ETH
@@ -66,7 +74,11 @@ export function TrendingBids() {
 						<button
 							type='button'
 							href='.'
-							className='rounded-2xl z-1'
+							className={
+								buttonSelected === backgroundWhenButtonIsSelected.stt
+									? 'rounded-2xl text-white dark:text-black'
+									: 'rounded-2xl dark:text-white'
+							}
 							onClick={() => selectButtonStt()}
 						>
 							STT
@@ -74,7 +86,7 @@ export function TrendingBids() {
 					</li>
 				</ul>
 			</nav>
-			<div>
+			<div className='sm:flex sm:justify-between sm:flex-wrap'>
 				{buttonSelected === backgroundWhenButtonIsSelected.eth ? (
 					<EthGraph />
 				) : (

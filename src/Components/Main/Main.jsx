@@ -5,8 +5,10 @@ import { TrendingBids } from './TrendingBids';
 export function Main() {
 	return (
 		<main className='px-5 mt-12 pb-14'>
-			<MainCard />
-			<TopNft />
+			<div className='sm:grid items-center justify-around '>
+				<MainCard />
+				<TopNft />
+			</div>
 			<TrendingBids />
 		</main>
 	);

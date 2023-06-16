@@ -4,7 +4,5 @@
 @tailwind utilities;
 
 body {
-	background-color: #131129;
 	font-family: 'Poppins';
-	color: #ffffff;
 }
