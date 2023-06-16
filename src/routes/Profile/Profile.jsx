@@ -19,8 +19,8 @@ export function Profile() {
 					welcomeMsg='Profile Page'
 				/>
 			</div>
-			<div className='px-5 pb-20 text-white ml:px-16'>
-				<div className='bg-elements-bg flex flex-col px-5 py-7 rounded-3xl drop-shadow-lg'>
+			<div className='px-5 pb-20 dark:text-white ml:px-16'>
+				<div className='bg-white dark:bg-elements-bg flex flex-col px-5 py-7 rounded-3xl drop-shadow-lg'>
 					<div className='mb-3'>
 						<img src={avatar} alt='' className=' rounded-full border-2' />
 					</div>

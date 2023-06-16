@@ -3,7 +3,7 @@ import avatar from '../../assets/avatar/avatarTopBig.svg';
 
 export function BoughtCard() {
 	return (
-		<div className='bg-elements-bg p-5 flex flex-col gap-3 rounded-2xl mb-7'>
+		<div className='bg-white dark:bg-elements-bg p-5 flex flex-col gap-3 rounded-2xl mb-7'>
 			<div className='relative'>
 				<img src={cardImg} alt='cardImage' className='rounded-3xl min-w-full' />
 				<img

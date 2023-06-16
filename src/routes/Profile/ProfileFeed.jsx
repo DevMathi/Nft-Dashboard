@@ -9,7 +9,7 @@ export function ProfileFeed() {
 		setFollowStatus(!followStatus);
 	}
 	return (
-		<div className='bg-elements-bg flex gap-4 py-5 px-5 rounded-xl items-center justify-between drop-shadow-lg my-5'>
+		<div className='bg-white dark:bg-elements-bg flex gap-4 py-5 px-5 rounded-xl items-center justify-between drop-shadow-lg my-5'>
 			<div className='flex gap-3'>
 				<img src={avatar} alt='AvatarImage' />
 				<div>
