@@ -1,15 +1,21 @@
 import { MainCard } from './MainCard';
 import { TopNft } from './TopNft';
 import { TrendingBids } from './TrendingBids';
+import { Header } from '../Header/Header';
 
 export function Main() {
 	return (
-		<main className='px-5 mt-12 pb-14'>
-			<div className='sm:grid items-center justify-around '>
-				<MainCard />
-				<TopNft />
+		<>
+			<div className='ml:px-16'>
+				<Header />
 			</div>
-			<TrendingBids />
-		</main>
+			<main className='px-5 mt-12 pb-14 ml:px-16 '>
+				<div className='sm:px-13 '>
+					<MainCard />
+					<TopNft />
+				</div>
+				<TrendingBids />
+			</main>
+		</>
 	);
 }
