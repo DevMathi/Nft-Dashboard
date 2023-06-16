@@ -2,9 +2,13 @@ import cardImg from '../../assets/card-imgs/nftPurple.svg';
 
 export function Card() {
 	return (
-		<div className='bg-white dark:bg-elements-bg rounded-2xl my-5 p-5 pb-70'>
+		<div className='bg-white ease-in duration-300 dark:bg-elements-bg rounded-2xl my-5 p-5 pb-70'>
 			<div>
-				<img src={cardImg} alt='topNftImage' />
+				<img
+					src={cardImg}
+					alt='topNftImage'
+					className='min-w-full rounded-3xl'
+				/>
 			</div>
 			<h2 className='font-semibold text-lg dark:text-white my-5'>
 				Liquid Wave

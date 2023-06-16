@@ -38,14 +38,14 @@ export function Settings() {
 		<>
 			<Header />
 			<RoutesTitle route='Settings' title='Setting' welcomeMsg='Setting Page' />
-			<div className='px-5 pb-20'>
+			<div className='px-5 pb-20 dark:text-white'>
 				<h2 className='font-semibold text-lg mb-5'>User profile</h2>
-				<div className='bg-elements-bg rounded-2xl p-5'>
+				<div className='  bg-white dark:bg-elements-bg rounded-2xl p-5'>
 					<div className='flex flex-col gap-3'>
 						<h3 className='font-semilbold'>Full Name</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1 px-2'
+							className='outline-none bg-transparent rounded-md border-gray-500 focus:outline-none focus:border-purple-button border-2 py-1 px-2'
 							placeholder='Digite seu nome aqui'
 							ref={nameInput}
 						/>
@@ -75,19 +75,19 @@ export function Settings() {
 					</div>
 					<button
 						type='button'
-						className='py-2 px-5 rounded-xl bg-purple-button mt-5 hover:brightness-75'
+						className='focus:outline-2 focus:outline-black py-2 px-5 rounded-xl bg-purple-button mt-5 hover:brightness-75 text-white'
 						onClick={setName}
 					>
 						Save
 					</button>
 				</div>
 				<h3 className='my-7 font-semibold'>Update Profile</h3>
-				<div className='bg-elements-bg rounded-2xl p-5'>
+				<div className=' bg-white dark:bg-elements-bg rounded-2xl p-5'>
 					<div className='flex flex-col gap-3'>
 						<h3 className='font-semilbold'>Email</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1'
+							className='px-2 outline-none bg-transparent rounded-md border-gray-500 focus:outline-none focus:border-purple-button border-2 py-1'
 							ref={inputEmail}
 						/>
 					</div>
@@ -95,36 +95,36 @@ export function Settings() {
 						<h3 className='font-semilbold'>Password</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1'
+							className='px-2 outline-none bg-transparent rounded-md focus:outline-none focus:border-purple-button border-gray-500 border-2 py-1'
 						/>
 					</div>
 					<button
 						type='button'
-						className='py-2 px-5 rounded-xl bg-purple-button mt-5 hover:brightness-75'
+						className='focus:outline-2 focus:outline-black py-2 px-5 rounded-xl bg-purple-button mt-5 hover:brightness-75 text-white'
 						onClick={changeModalVisibility}
 					>
 						Save
 					</button>
 				</div>
 				<h3 className='my-7 font-semibold'>Personal Information</h3>
-				<div className='bg-elements-bg rounded-2xl p-5'>
+				<div className=' bg-white dark:bg-elements-bg rounded-2xl p-5'>
 					<div className='flex flex-col gap-3'>
 						<h3 className='font-semilbold'>Info</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1'
+							className='outline-none bg-transparent rounded-md focus:outline-none focus:border-purple-button border-gray-500 border-2 py-1 px-2'
 						/>
 					</div>
 					<div className='flex flex-col gap-3 mt-5'>
 						<h3 className='font-semilbold'>Info</h3>
 						<input
 							type='text'
-							className='outline-none bg-transparent rounded-md border-x-gray-500 border-2 py-1'
+							className='px-2 outline-none bg-transparent rounded-md focus:outline-none focus:border-purple-button border-gray-500 border-2 py-1'
 						/>
 					</div>
 					<button
 						type='button'
-						className='py-2 px-5 rounded-xl bg-purple-button mt-5 hover:brightness-75'
+						className='py-2 px-5 focus:outline-2 focus:outline-black rounded-xl bg-purple-button mt-5 hover:brightness-75 text-white'
 					>
 						Save
 					</button>

@@ -3,8 +3,8 @@ import { Button } from '../Buttons/Button';
 export function MainCard() {
 	return (
 		<div className='drop-shadow-lg '>
-			<div className='bg-card-background bg-no-repeat rounded-xl bg-cover'>
-				<div className='rounded-xl bg-center bg-cover-card-background-desk bg-no-repeat bg-cover  tb:p-2 '>
+			<div className='bg-card-background bg-no-repeat rounded-3xl bg-cover'>
+				<div className='rounded-3xl bg-center bg-cover-card-background-desk bg-no-repeat bg-cover  tb:p-2 '>
 					<div className='p-3'>
 						<h1 className=' font-semibold	font-poppins text-white text-2xl'>
 							Discover, Collect, Sell <br />

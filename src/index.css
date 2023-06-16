@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*:focus {
+	outline: 2px solid #6f4ff2;
+}
+
 body {
 	font-family: 'Poppins';
 }

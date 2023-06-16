@@ -86,15 +86,21 @@ export function TrendingBids() {
 					</li>
 				</ul>
 			</nav>
-			<div className='sm:flex sm:justify-between sm:flex-wrap'>
+			<div>
 				{buttonSelected === backgroundWhenButtonIsSelected.eth ? (
 					<EthGraph />
 				) : (
 					' '
 				)}
-				{buttonSelected === backgroundWhenButtonIsSelected.all
-					? cardsRender.map((value) => <Card key={value} />)
-					: ' '}
+				{buttonSelected === backgroundWhenButtonIsSelected.all ? (
+					<div className='sm:flex sm:justify-between sm:flex-wrap'>
+						{cardsRender.map((value) => (
+							<Card key={value} />
+						))}
+					</div>
+				) : (
+					' '
+				)}
 				{buttonSelected === backgroundWhenButtonIsSelected.stt ? (
 					<CircleGraph />
 				) : (

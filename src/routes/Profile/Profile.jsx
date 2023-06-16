@@ -11,9 +11,15 @@ export function Profile() {
 	const usersFollowing = [1, 2, 3, 4, 5];
 	return (
 		<>
-			<Header />
-			<RoutesTitle route='Profile' title='Profile' welcomeMsg='Profile Page' />
-			<div className='px-5 pb-20'>
+			<div className='ml:px-16'>
+				<Header />
+				<RoutesTitle
+					route='Profile'
+					title='Profile'
+					welcomeMsg='Profile Page'
+				/>
+			</div>
+			<div className='px-5 pb-20 text-white ml:px-16'>
 				<div className='bg-elements-bg flex flex-col px-5 py-7 rounded-3xl drop-shadow-lg'>
 					<div className='mb-3'>
 						<img src={avatar} alt='' className=' rounded-full border-2' />
@@ -49,8 +55,8 @@ export function Profile() {
 						<ProfileFeed key={value} />
 					))}
 				</div>
-				<div>
-					<h2 className='my-8 font-semibold text-lg'>My Bought</h2>
+				<h2 className='my-8 font-semibold text-lg'>My Bought</h2>
+				<div className='px-5 mt-12 pb-14 sm:flex sm:justify-between sm:flex-wrap'>
 					{usersFollowing.map((value) => (
 						<BoughtCard key={value} />
 					))}

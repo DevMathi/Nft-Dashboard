@@ -5,9 +5,9 @@ import { Button } from '../Buttons/Button';
 
 export function TopNft() {
 	return (
-		<div className='bg-white dark:bg-elements-bg rounded-2xl mt-5 p-5 pb-70 sm :flex gap-6'>
-			<div>
-				<img src={topNftImage} alt='topNftImage' />
+		<div className='bg-white ease-in duration-300 dark:bg-elements-bg rounded-2xl mt-5 p-5 pb-70 sm :flex gap-6 tb:py-10 sm:flex sm:gap-6'>
+			<div className='tb:flex tb:justify-center'>
+				<img src={topNftImage} alt='topNftImage' className='min-w-full' />
 			</div>
 			<div>
 				<div className='flex gap-3 items-center dark:text-white  mt-4 mb-4 '>
