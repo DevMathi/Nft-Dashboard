@@ -5,9 +5,9 @@ import { Button } from '../Buttons/Button';
 
 export function TopNft() {
 	return (
-		<div className='bg-white ease-in duration-300 dark:bg-elements-bg rounded-2xl mt-5 p-5 pb-70 sm :flex gap-6 tb:py-10 sm:flex sm:gap-6'>
+		<div className='bg-white ease-in duration-300 dark:bg-elements-bg rounded-2xl mt-5 p-5 pb-70 sm :flex gap-6 tb:py-10 sm:flex sm:gap-6 lg:py-2 lg:px-2 lg:mt-0'>
 			<div className='tb:flex tb:justify-center'>
-				<img src={topNftImage} alt='topNftImage' className='min-w-full' />
+				<img src={topNftImage} alt='topNftImage' className='min-w-full ' />
 			</div>
 			<div>
 				<div className='flex gap-3 items-center dark:text-white  mt-4 mb-4 '>
@@ -35,7 +35,7 @@ export function TopNft() {
 						text='Place a Bid'
 						px='5'
 						py='2'
-						anotherStyle='tb:px-10'
+						anotherStyle='tb:px-10 lg:px-5'
 						color='bg-purple-button'
 					/>
 					<Button
@@ -43,7 +43,7 @@ export function TopNft() {
 						px='7'
 						py='2'
 						color='bg-red-button'
-						anotherStyle='tb:px-12'
+						anotherStyle='tb:px-12 lg:px-10'
 					/>
 				</div>
 			</div>

@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsMoon } from 'react-icons/bs';
 import { FiSun } from 'react-icons/fi';
-import LogoImg from '../../assets/header-imgs/logo.svg';
 import bellIcon from '../../assets/header-imgs/bell.svg';
 import avatar from '../../assets/header-imgs/avatar.svg';
-import LogoWhite from '../../assets/header-imgs/logowhite.svg';
 
 export function Header() {
 	const [theme, setTheme] = useState('light');
@@ -23,16 +21,6 @@ export function Header() {
 	return (
 		<header className='flex ml:justify-between pt-8 justify-center items-center min-[400]:p-1 px-5'>
 			<div className='text-center items-center flex ml:gap-5'>
-				<div className='sm:hidden'>
-					<Link to='/'>
-						<img
-							src={theme === 'dark' ? LogoImg : LogoWhite}
-							alt='logo'
-							className='w-10.75 h-10.75 '
-						/>
-					</Link>
-				</div>
-
 				<div className='relative'>
 					<input
 						type='text'

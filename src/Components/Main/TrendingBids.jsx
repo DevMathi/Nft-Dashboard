@@ -25,7 +25,7 @@ export function TrendingBids() {
 
 	return (
 		<div>
-			<nav className='flex text-sm gap-20 my-12  justify-center'>
+			<nav className='flex text-sm gap-20 my-12  justify-center lg:justify-between'>
 				<div>
 					<h2 className='font-semibold text-xl dark:text-white'>
 						{buttonSelected === backgroundWhenButtonIsSelected.all
@@ -93,7 +93,7 @@ export function TrendingBids() {
 					' '
 				)}
 				{buttonSelected === backgroundWhenButtonIsSelected.all ? (
-					<div className='sm:flex sm:justify-between sm:flex-wrap'>
+					<div className='sm:flex sm:justify-around sm:flex-wrap'>
 						{cardsRender.map((value) => (
 							<Card key={value} />
 						))}

@@ -9,8 +9,8 @@ import LogoImg from '../../assets/header-imgs/logo.svg';
 
 export function NavMenu() {
 	return (
-		<nav className='fixed bottom-0 w-full z-10'>
-			<div className='bg-white ease-in duration-300 dark:bg-elements-bg flex items-center justify-center gap-9 py-5 w-full ml:py-2'>
+		<nav className='fixed bottom-0 w-full z-10  lg:bottom-0 '>
+			<div className='bg-white ease-in duration-300 dark:bg-elements-bg flex items-center justify-center gap-9 py-5 w-full tb:py-2 tb:justify-between sm:justify-around '>
 				<button type='button' className='ml-7'>
 					<Link to='/Bids'>
 						<img src={bidIcon} alt='bidIcon' />
@@ -26,9 +26,9 @@ export function NavMenu() {
 						<img src={profileIcon} alt='profileIcon' />
 					</Link>
 				</button>
-				<button type='button' className='hidden sm:block'>
+				<button type='button' className='hidden tb:block'>
 					<Link to='/'>
-						<img src={LogoImg} alt='logo' className='w-10.75 h-10.75 ' />
+						<img src={LogoImg} alt='logo' />
 					</Link>
 				</button>
 				<button type='button'>

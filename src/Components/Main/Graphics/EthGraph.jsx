@@ -27,7 +27,7 @@ export function EthGraph() {
 		datasets: [
 			{
 				fill: true,
-				label: 'Dataset 2',
+				label: 'Valor',
 				data: [0, 100, 180, 150, 140, 200, 250, 300, 350],
 				borderColor: '#6F4FF2',
 				backgroundColor: '#704ff230',
@@ -48,11 +48,9 @@ export function EthGraph() {
 		},
 	};
 	return (
-		<div>
-			<div className='bg-white dark:bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4'>
-				<div>
-					<Line data={data} options={options} />
-				</div>
+		<div className='lg:px-24 lg:py-4'>
+			<div className='bg-white dark:bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4 flex lg:justify-center'>
+				<Line data={data} options={options} />
 			</div>
 		</div>
 	);
