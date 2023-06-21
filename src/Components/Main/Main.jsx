@@ -9,7 +9,7 @@ export function Main() {
 			<div className='ml:px-16'>
 				<Header />
 			</div>
-			<main className='px-5 mt-12 pb-14 ml:px-16 '>
+			<main className='px-5 mt-12 pb-14 ml:px-24 '>
 				<div className='sm:px-13 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center'>
 					<MainCard />
 					<TopNft />

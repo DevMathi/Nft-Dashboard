@@ -7,13 +7,16 @@ import bellIcon from '../../assets/header-imgs/bell.svg';
 import avatar from '../../assets/header-imgs/avatar.svg';
 
 export function Header() {
-	const [theme, setTheme] = useState('light');
+	const [theme, setTheme] = useState(
+		localStorage.getItem('theme') !== 'dark' ? 'light' : 'dark'
+	);
 	useEffect(() => {
 		if (theme === 'dark') {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
+		localStorage.setItem('theme', theme);
 	}, [theme]);
 	const handleThemeSwitch = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');

@@ -15,7 +15,7 @@ export function MainCard() {
 							<br />
 							and non fungable tokens
 						</h2>
-						<div className='mt-10 '>
+						<div className='mt-10 sm:flex sm:gap-6'>
 							<Button
 								text='Explore'
 								px='5 '

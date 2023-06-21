@@ -15,7 +15,7 @@ export function Collections() {
 					title='Collections'
 				/>
 			</div>
-			<div className='px-5 mt-12 ml:px-16 sm:px-20 sm:flex sm:justify-between sm:flex-wrap'>
+			<div className='px-5 mt-12 sm:px-20 sm:flex  sm:flex-wrap sm:pb-24 sm:gap-10 ml:px-24'>
 				{cardsRender.map((value) => (
 					<Card key={value} />
 				))}
