@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 import { useState } from 'react';
 import { Card } from '../Card/Card';
 import { EthGraph } from './Graphics/EthGraph';
@@ -88,7 +89,9 @@ export function TrendingBids() {
 			</nav>
 			<div>
 				{buttonSelected === backgroundWhenButtonIsSelected.eth ? (
-					<EthGraph />
+					<div className='lg:px-72 lg:py-4'>
+						<EthGraph styleGraph='bg-white dark:bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4 flex lg:justify-center ' />
+					</div>
 				) : (
 					' '
 				)}
@@ -102,7 +105,9 @@ export function TrendingBids() {
 					' '
 				)}
 				{buttonSelected === backgroundWhenButtonIsSelected.stt ? (
-					<CircleGraph />
+					<div className='lg:flex lg:items-center lg:justify-center lg:py-2'>
+						<CircleGraph styleGraph='mb-6 p-5 tb:mb-10 tb:p-10 bg-white dark:bg-elements-bg rounded-2xl flex justify-center lg:p-20' />
+					</div>
 				) : (
 					' '
 				)}

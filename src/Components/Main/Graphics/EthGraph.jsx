@@ -21,7 +21,7 @@ ChartJS.register(
 	Filler,
 	Legend
 );
-export function EthGraph() {
+export function EthGraph({ styleGraph }) {
 	const data = {
 		labels: ['', '', ' ', '', '', '', ''],
 		datasets: [
@@ -48,10 +48,8 @@ export function EthGraph() {
 		},
 	};
 	return (
-		<div className='lg:px-24 lg:py-4'>
-			<div className='bg-white dark:bg-elements-bg rounded-2xl pb-4 px-3 py-8 mb-4 flex lg:justify-center'>
-				<Line data={data} options={options} />
-			</div>
+		<div className={styleGraph}>
+			<Line data={data} options={options} />
 		</div>
 	);
 }

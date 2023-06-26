@@ -6,8 +6,8 @@ import { Card } from '../../Components/Card/Card';
 export function SavedItems() {
 	const cardsRender = [1, 2, 3, 4, 5, 6];
 	return (
-		<>
-			<div className='ml:px-16'>
+		<div className='lg:pl-10'>
+			<div className='ml:px-16 '>
 				<Header />
 				<RoutesTitle
 					route='Saved'
@@ -21,6 +21,6 @@ export function SavedItems() {
 				))}
 			</div>
 			<NavMenu />
-		</>
+		</div>
 	);
 }

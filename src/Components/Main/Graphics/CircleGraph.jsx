@@ -14,12 +14,11 @@ export const data = {
 		},
 	],
 };
-export function CircleGraph() {
+export function CircleGraph({ styleGraph }) {
+	const graphStyle = `${styleGraph}`;
 	return (
-		<div className='flex justify-center'>
-			<div className='mb-6 p-5 tb:mb-10 tb:p-10 bg-white dark:bg-elements-bg rounded-2xl flex justify-center'>
-				<Doughnut data={data} />
-			</div>
+		<div className={graphStyle}>
+			<Doughnut data={data} />
 		</div>
 	);
 }

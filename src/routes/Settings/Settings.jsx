@@ -35,7 +35,7 @@ export function Settings() {
 		setModalIsOpen(!modalIsOpen);
 	}
 	return (
-		<>
+		<div className='lg:pl-20'>
 			<Header />
 			<RoutesTitle route='Settings' title='Setting' welcomeMsg='Setting Page' />
 			<div className='px-5 pb-20 dark:text-white '>
@@ -136,6 +136,6 @@ export function Settings() {
 				</div>
 			</div>
 			<NavMenu />
-		</>
+		</div>
 	);
 }

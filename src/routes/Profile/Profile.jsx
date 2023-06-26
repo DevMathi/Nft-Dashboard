@@ -10,7 +10,7 @@ import { BoughtCard } from './BoughtCard';
 export function Profile() {
 	const usersFollowing = [1, 2, 3, 4, 5];
 	return (
-		<>
+		<div className='lg:pl-10'>
 			<div className='ml:px-16'>
 				<Header />
 				<RoutesTitle
@@ -63,6 +63,6 @@ export function Profile() {
 				</div>
 			</div>
 			<NavMenu />
-		</>
+		</div>
 	);
 }

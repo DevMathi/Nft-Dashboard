@@ -6,7 +6,7 @@ import { RoutesTitle } from '../RoutesTitle';
 export function Collections() {
 	const cardsRender = [1, 2, 3, 4, 5, 6];
 	return (
-		<>
+		<div className='lg:pl-10'>
 			<div className='ml:px-16'>
 				<Header />
 				<RoutesTitle
@@ -21,6 +21,6 @@ export function Collections() {
 				))}
 			</div>
 			<NavMenu />
-		</>
+		</div>
 	);
 }
