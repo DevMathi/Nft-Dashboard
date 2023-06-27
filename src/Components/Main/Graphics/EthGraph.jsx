@@ -27,7 +27,7 @@ export function EthGraph({ styleGraph }) {
 		datasets: [
 			{
 				fill: true,
-				label: 'Valor',
+				label: 'ETH Price',
 				data: [0, 100, 180, 150, 140, 200, 250, 300, 350],
 				borderColor: '#6F4FF2',
 				backgroundColor: '#704ff230',
@@ -36,14 +36,22 @@ export function EthGraph({ styleGraph }) {
 	};
 	const options = {
 		responsive: true,
+		layout: {
+			padding: 20,
+			autoPadding: true,
+		},
 		plugins: {
 			legend: {
 				display: false,
 				position: 'top',
 			},
 			title: {
-				display: false,
-				text: 'Chart.js Line Chart',
+				display: true,
+				text: 'ETH Price',
+				color: 'white',
+				font: { weight: 'bold' },
+				position: 'top',
+				padding: 0,
 			},
 		},
 	};

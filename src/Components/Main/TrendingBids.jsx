@@ -106,7 +106,7 @@ export function TrendingBids() {
 				)}
 				{buttonSelected === backgroundWhenButtonIsSelected.stt ? (
 					<div className='lg:flex lg:items-center lg:justify-center lg:py-2'>
-						<CircleGraph styleGraph='mb-6 p-5 tb:mb-10 tb:p-10 bg-white dark:bg-elements-bg rounded-2xl flex justify-center lg:p-20' />
+						<CircleGraph styleGraph='mb-6 p-5 tb:mb-10 tb:p-10 bg-white dark:bg-elements-bg rounded-2xl flex justify-center lg:p-10' />
 					</div>
 				) : (
 					' '
