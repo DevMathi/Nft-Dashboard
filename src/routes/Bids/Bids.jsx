@@ -34,14 +34,14 @@ export function Bids() {
 				</div>
 			</div>
 			<div className='hidden lg:flex mt-8 pl-6 gap-16'>
-				<div>
+				<div className='basis-2/4'>
 					<div className='mb-11 pl-5 flex justify-between'>
 						<h1 className='text-white'>Recent Activity</h1>
 						<a href='.' className='text-purple-button hover:underline'>
 							See More..
 						</a>
 					</div>
-					<div className='flex flex-col gap-2'>
+					<div className='flex flex-col gap-3'>
 						{repeater.map(() => (
 							<Activities />
 						))}
@@ -51,7 +51,7 @@ export function Bids() {
 					<div className='mb-11 pl-5 flex justify-between'>
 						<h1 className='text-white'>Top Creators</h1>
 					</div>
-					<div className='grid grid-cols-2 grid-rows-4 gap-5 '>
+					<div className='flex flex-wrap gap-5'>
 						{topCreatosRepeater.map(() => (
 							<Creators />
 						))}

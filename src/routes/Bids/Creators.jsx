@@ -8,14 +8,14 @@ export function Creators() {
 		setFollowState(!followState);
 	};
 	return (
-		<div className='bg-white dark:bg-elements-bg  flex items-center py-4 rounded-xl justify-between px-5'>
-			<div className='flex'>
+		<div className='bg-white dark:bg-elements-bg  flex items-center py-4 rounded-xl justify-between px-3 basis-2/3 max-w-lg'>
+			<div className='flex '>
 				<div>
 					<img src={avatarImg} alt='avatar-icon' />
 				</div>
 				<div
 					className='
-						ml-5 '
+						ml-4 '
 				>
 					<h1 className='dark:text-white'>Papaya</h1>
 					<p className='dark:text-white'>{randomNumber} items</p>
